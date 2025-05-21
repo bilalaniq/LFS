@@ -357,14 +357,9 @@ GRUB_DEFAULT=0
 
 You should modify it to point to the kernel you want to boot by default. For example, if you want to boot into 6.7.0, you can set it too
 
-```bash
-GRUB_DEFAULT="Advanced options for Kali GNU/Linux GNU/Linux>Kali GNU/Linux GNU/Linux, with Linux 6.7.0"
-```
-
 change it depending upon your linux version
 
-then reboot again to see if grup has changed the linux kernel 
-
+or you could select the linux when booting
 
 ## conclusion:
 
@@ -398,3 +393,6 @@ printk(KERN_EMERG "Welcome Bilal - booting kernel...\n");
 Customizing the Linux kernel with a graphical flavor is possible, but note that the kernel itself does not support rich GUIs—it's responsible for hardware, processes, memory, etc. However, you can make customizations at the kernel level, boot level, and desktop level to give it a visual, personalized experience
 
 ---
+
+
+now if you have learned about the recompilation lets do an assignment click [here](./assignment.md) 
