@@ -363,3 +363,37 @@ here you will see
 | `kernel/sched/idle.c`      | Idle task scheduler                             |
 | `kernel/sched/stop_task.c` | Used during CPU hotplug and stop machine tasks  |
 | `include/linux/sched.h`    | Task and scheduling structure definitions       |
+
+---
+
+i will only do for FCFS because it is the simples one but Linux does not natively support FCFS as a separate policy, so you will need to either:
+
+- Modify the Existing CFS Scheduler to Behave Like FCFS
+- Create a New Scheduler Class for FCFS
+
+i will go with the secound option
+
+create an file
+
+```bash
+touch fcfs.c
+```
+
+Edit kernel/sched/Makefile
+
+Comment out or remove this line:
+
+```bash
+# obj-y += fair.o
+```
+
+Add this line:
+
+```bash
+obj-y += fcfs.o
+```
+
+becase we will replace the fair(cfs) with the fcfs alg
+
+
+
